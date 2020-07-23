@@ -1,0 +1,25 @@
+.todoForm {
+  text-align: center;
+}
+
+.todoForm__field{
+  border: 0;
+  padding: 1em;
+  font-size: 1.5em;
+  width: 60vw;
+  background-color: #e4e4e4;
+  border-radius:10px;
+  box-shadow: rgb(0, 0, 0) 0 0 2px;
+}
+
+.todoForm__button{
+  margin-top: 1em;
+  padding: 1em;
+  background-color: #3498db;
+  color: white;
+  border-color: #00000000;
+  width: 63vw;
+  font-size: 1.5em;
+  box-shadow: rgb(29, 29, 29) 1px 1px 3px;
+  border-radius: 10px;
+}
