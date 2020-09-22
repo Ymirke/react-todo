@@ -6,22 +6,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "eslint": "^6.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3"
+    "react-scripts": "^3.4.3",
+    "uuid": "^8.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "yarn run eslint .",
+    "lint": "npx eslint --fix",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "salt",
-      "salt/react"
-    ]
   },
   "browserslist": {
     "production": [
@@ -36,6 +32,11 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-salt": "^1.0.1"
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2"
   }
 }

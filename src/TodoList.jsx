@@ -1,42 +1,40 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Todo from './Todo'
 import './TodoList.css'
 
-class TodoList extends Component {
-  render() {
-    return (
-      <main className="TodoList">
-        {
-          this.props.todos.map((todoItem) => {
-            if (!todoItem.done) return (
-              <Todo
-                toggleDone={this.props.toggleDone}
-                deleteTodo={this.props.deleteTodo}
-                todoText={todoItem.todoText}
-                done={todoItem.done}
-                id={todoItem.id}
-                key={todoItem.id}
-              />
-            )
-            return undefined
-          })
-        }
-        {
-          this.props.todos.map((todoItem) => {
-            if (todoItem.done) return (<Todo
-              toggleDone={this.props.toggleDone}
-              deleteTodo={this.props.deleteTodo}
+export default function TodoList ({todos, toggleDone, deleteTodo}) {
+  return (
+    <main className="TodoList">
+      {
+        todos.map((todoItem) => {
+          if (!todoItem.done) return (
+            <Todo
+              toggleDone={toggleDone}
+              deleteTodo={deleteTodo}
               todoText={todoItem.todoText}
               done={todoItem.done}
               id={todoItem.id}
               key={todoItem.id}
-            />)
-            return undefined
-          })
-        }
-      </main >
-    )
-  }
+            />
+          )
+          return undefined;
+        })
+      }
+      {
+        todos.map((todoItem) => {
+          if (todoItem.done) return (
+            <Todo
+              toggleDone={toggleDone}
+              deleteTodo={deleteTodo}
+              todoText={todoItem.todoText}
+              done={todoItem.done}
+              id={todoItem.id}
+              key={todoItem.id}
+            />
+          ) 
+          return undefined;
+        })
+      }
+    </main>
+  )
 }
-
-export default TodoList
