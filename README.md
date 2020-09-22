@@ -1,6 +1,6 @@
 # Simple React Todo App
 
-![Image of todo app](https://github.com/Ymirke/react-todo/blob/master/react-todo.png)
+![Image of todo app](https://github.com/Ymirke/react-todo/blob/master/react-todo2.png)
 
 ## About
 Built with functional components and hooks. 
