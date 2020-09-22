@@ -9,11 +9,11 @@ export default function App() {
   const initTodos = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : [];
   const [todos, setTodos] = useState(initTodos);
   const [error, setError] = useState('');
-  
+
   const updateTodos = (todoArray) => {
     setTodos(todoArray);
     localStorage.setItem('todos', JSON.stringify(todoArray))
-  }
+  };
 
   const toggleDone = (id) => {
     const newTodos = todos.map((todo) => {
@@ -54,12 +54,12 @@ export default function App() {
 
   return (
     <div className="app">
-        <Header error={error} createTodo={createTodo} />
-        <TodoList
-          todos={todos}
-          toggleDone={toggleDone}
-          deleteTodo={deleteTodo}
-        />
-      </div>
+      <Header error={error} createTodo={createTodo} />
+      <TodoList
+        todos={todos}
+        toggleDone={toggleDone}
+        deleteTodo={deleteTodo}
+      />
+    </div>
   );
 }

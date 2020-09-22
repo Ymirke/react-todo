@@ -8,7 +8,6 @@ export default function Header({ error, createTodo }) {
       <h1 className="header__headline">
         <a className="header__headlineLink" href="https://github.com/Ymirke/react-todo">React todo</a>
       </h1>
-    
       <Form createTodo={createTodo} error={error} />
     </nav>
   );

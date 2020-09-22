@@ -28,9 +28,7 @@ export default function Form({ createTodo, error }) {
         onChange={handleChange}
       />
       <input className="todoForm__button" type="submit" value="Create todo" />
-      {error ?
-      <p className="todoForm__errorDisplay">{error}</p>
-      : null}
+      {error ? <p className="todoForm__errorDisplay">{error}</p> : null}
     </form>
   );
 }
