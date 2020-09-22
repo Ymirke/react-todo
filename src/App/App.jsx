@@ -6,11 +6,17 @@ import './reset.css';
 import './App.css';
 
 export default function App() {
-  const [todos, setTodos] = useState([]);
+  const initTodos = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : [];
+  const [todos, setTodos] = useState(initTodos);
   const [error, setError] = useState('');
   
+  const updateTodos = (todoArray) => {
+    setTodos(todoArray);
+    localStorage.setItem('todos', JSON.stringify(todoArray))
+  }
+
   const toggleDone = (id) => {
-    const newCards = todos.map((todo) => {
+    const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         // eslint-disable-next-line no-param-reassign
         todo.done = !todo.done;
@@ -18,7 +24,7 @@ export default function App() {
       }
       return todo;
     });
-    setTodos(newCards);
+    updateTodos(newTodos);
   };
 
   const createTodo = (todoText) => {
@@ -38,12 +44,12 @@ export default function App() {
       id: uuidv4(),
     };
 
-    return setTodos([...todos, newTodo]);
+    return updateTodos([...todos, newTodo]);
   };
 
   const deleteTodo = (id) => {
     const newTodos = todos.filter((todoItem) => todoItem.id !== id);
-    setTodos(newTodos);
+    updateTodos(newTodos);
   };
 
   return (
