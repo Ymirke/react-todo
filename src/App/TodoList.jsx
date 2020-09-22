@@ -4,7 +4,7 @@ import './TodoList.css'
 
 export default function TodoList ({todos, toggleDone, deleteTodo}) {
   return (
-    <main className="TodoList">
+    <section className="TodoList">
       {
         todos.map((todoItem) => {
           if (!todoItem.done) return (
@@ -35,6 +35,6 @@ export default function TodoList ({todos, toggleDone, deleteTodo}) {
           return undefined;
         })
       }
-    </main>
+    </section>
   )
 }

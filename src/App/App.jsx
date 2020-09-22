@@ -47,13 +47,13 @@ export default function App() {
   };
 
   return (
-    <>
-      <Header error={error} createTodo={createTodo} />
-      <TodoList
-        todos={todos}
-        toggleDone={toggleDone}
-        deleteTodo={deleteTodo}
-      />
-    </>
+    <div className="app">
+        <Header error={error} createTodo={createTodo} />
+        <TodoList
+          todos={todos}
+          toggleDone={toggleDone}
+          deleteTodo={deleteTodo}
+        />
+      </div>
   );
 }

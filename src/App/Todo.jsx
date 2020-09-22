@@ -5,7 +5,7 @@ export default function Todo ({toggleDone, deleteTodo, todoText, done, id }) {
   if (done) {
     return (
       <article onClick={() => { toggleDone(id) }} className="todoItem todoItem--done">
-        <h3>{todoText}</h3>
+        <h3 className="todoItem__text">{todoText}</h3>
         <button className="todoItem__deleteButton" onClick={(event) => { 
           event.stopPropagation(); 
           deleteTodo(id);

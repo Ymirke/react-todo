@@ -2,29 +2,45 @@
   display:flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 auto 1em auto;
   padding: 1em;
-  width: 60vw;
   font-size: 1.5em;
-  border-radius: 10px;
-  background-color: rgb(241, 241, 241);
   position: relative;
-  box-shadow: rgb(134, 134, 134) 0px 1px 1px;
+  border-bottom: 0.5px solid #bdc3c7;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.todoItem__text{
+  max-width: 80%;
+  word-wrap: break-word;
 }
 
 .todoItem__deleteButton {
   position: absolute;
-  padding: 0 1em 0 1em;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
   right: 0;
-  font-size: 0.9em;
-  height: 100%;
+  font-size: 0.8em;
+  height: 70%;
   font-weight: 700;
-  background-color: rgb(0, 205, 184);
+  color:#bdc3c7;
+  border: none;
+  background-color: transparent;
+}
+
+.todoItem__deleteButton:hover{
+  cursor: pointer;
+  background-color: #bdc3c7;
+  color: #fff ;
   border-radius: 10px;
-  border-color: #00000000
 }
 
 .todoItem--done {
-  background-color:#bdc3c7;
+  color:#bdc3c7;
   text-decoration: line-through;
 }
+

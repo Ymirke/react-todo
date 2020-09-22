@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Form.css';
 
-export default function Form({ createTodo }) {
+export default function Form({ createTodo, error }) {
   const [todoText, setTodoText] = useState('');
 
   const handleChange = (event) => {
@@ -28,6 +28,9 @@ export default function Form({ createTodo }) {
         onChange={handleChange}
       />
       <input className="todoForm__button" type="submit" value="Create todo" />
+      {error ?
+      <p className="todoForm__errorDisplay">{error}</p>
+      : null}
     </form>
   );
 }
