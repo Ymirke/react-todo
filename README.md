@@ -1,16 +1,3 @@
-# Simple React Todo App
+# Todo apps in different web frameworks. 
 
-[Live demo](https://react-todo-ymirke.herokuapp.com/)
-
-
-![Image of todo app](https://github.com/Ymirke/react-todo/blob/master/react-todo2.png)
-
-## About
-Built with functional components and hooks. 
-Class-components branch for class implementation.
-
-### Run with:
-```console
-> npm install 
-> npm start
-```
+Each branch is a todo app I've made in different frameworks. 
