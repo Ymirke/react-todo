@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f9f9;
+
+  --red: #dd0034;
+  --lightgray: rgb(211, 211, 211);
+}
+
+.App__container {
+  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.Headline {
+  color: var(--red);
+  text-shadow: 0px 0px 3px var(--lightgray);
+}
+
+.Todo__input {
+  display: flex;
+  margin-bottom: 25px !important;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px var(--lightgray);
+}
+
+.Todo__inputField {
+  width: 100%;
+  font-size: 1.2rem;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px;
+  border: none;
+  background-color: white;
+  color: black;
+}
+
+.Todo__inputField::placeholder {
+  color: rgb(120, 120, 120);
+}
+
+.Todo__inputButton {
+  border: none;
+  background-color: #242425;
+  color: white;
+  width: 150px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Todo__inputButton:hover {
+  cursor: pointer;
+}
+
+.Todo__inputButtonIcon {
+  margin-right: 5px;
+}
+
+.icon--invert {
+  filter: invert(1);
+}
+
+.todoList {
+  padding: 0;
+}
+
+.todo {
+  padding: 10px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 1.5em;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px var(--lightgray);
+  margin: 10px 0;
+  user-select: none;
+}
+
+.todo--isDone {
+  text-decoration: line-through;
+  background-color: #ebebeb;
+}
+
+.todo__delete {
+  margin-left: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--red);
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50px;
+}
+
+@media (min-width: 576px) {
+  .todoList {
+    margin: 0px 50px;
+  }
+  .Todo__input {
+    margin: 0px 50px;
+  }
+  .todo__delete {
+    width: 75px;
+  }
+}

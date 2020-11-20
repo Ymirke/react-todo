@@ -1,0 +1,18 @@
+<div class="App__container">
+  <h1 class="Headline">Angular todo</h1>
+  <app-todo-input
+    [todoText]="todoText"
+    [addTodo]="addTodo"
+    [todos]="todos"
+    [nextId]="nextId"
+    [saveTodos]="saveTodos"
+  ></app-todo-input>
+  <app-todo-list
+    (deleteEvent)="recieveDeleteEvent($event)"
+    (todoDoneEvent)="toggleTodoisDone($event)"
+    [toggleTodoisDone]="toggleTodoisDone"
+    [todos]="todos"
+    (deleteEvent)="recieveDeleteEvent($event)"
+  ></app-todo-list>
+</div>
+<router-outlet></router-outlet>
