@@ -13,7 +13,7 @@ body {
 
 .App__container {
   margin: 0;
-  max-width: 700px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -21,6 +21,7 @@ body {
 
 .Headline {
   color: var(--red);
+  font-size: 3rem;
   text-shadow: 0px 0px 3px var(--lightgray);
 }
 
@@ -33,7 +34,7 @@ body {
 
 .Todo__inputField {
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 2rem;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   padding: 10px;
@@ -47,10 +48,11 @@ body {
 }
 
 .Todo__inputButton {
+  font-size: 1.5rem;
   border: none;
   background-color: #242425;
   color: white;
-  width: 150px;
+  width: 200px;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   display: flex;
@@ -70,6 +72,14 @@ body {
   filter: invert(1);
 }
 
+.checkbox--doubleSize {
+  transform: scale(1.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
 .todoList {
   padding: 0;
 }
@@ -80,7 +90,7 @@ body {
   display: flex;
   align-items: center;
   list-style: none;
-  font-size: 1.5em;
+  font-size: 2rem;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 1px 3px var(--lightgray);

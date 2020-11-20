@@ -7,23 +7,26 @@ import { Todo } from '../../Models';
     <div 
       [ngClass]="setClasses()"
       (click)="emitToggleTodoisDone(todo)"
-    >
-      <input 
+      >
+      <div class="checkbox--doubleSize">
+        <input 
         type="checkbox" 
         [checked]="todo.isDone"
-      />
+        />
+      </div>
       <li>{{ todo.text }}</li>
       <button 
         *ngIf="todo.isDone" 
         (click)="emitDeleteTodo(todo.id)" 
         class="todo__delete"
       >
-      <img 
-        class="icon--invert"
-        height="16px" 
-        width="16px" 
-        src="assets/trash.svg" 
-        alt="Gylph of trash can - to delete item.">
+        <img 
+          class="icon--invert"
+          height="24px" 
+          width="24px" 
+          src="assets/trash.svg" 
+          alt="Gylph of trash can - to delete item."
+        >
       </button>
     </div>
   `,

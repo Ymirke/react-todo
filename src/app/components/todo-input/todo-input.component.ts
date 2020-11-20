@@ -19,8 +19,8 @@ import { Todo } from '../../Models';
        <img 
         class="Todo__inputButtonIcon icon--invert"
         src="assets/add-circle.svg" 
-        heigth="16px" 
-        width="16px"
+        heigth="32px" 
+        width="32px"
       > 
         Add todo
       </button>
