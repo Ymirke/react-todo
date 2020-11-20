@@ -1,4 +1,4 @@
-# AngularApp
+# Angular todo
 
 [Link to demo](https://todo-in-angular-demo.netlify.app/)
 
